@@ -1,0 +1,57 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: pm01
+  labels:
+    app: pm01
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pm01
+  template:
+    metadata:
+      labels:
+        app: pm01
+    spec:
+      containers:
+      - name: pm01
+        image: pm01:v1.0.0
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000
+          protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /status
+            port: 5000
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: /status
+            port: 5000
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        env:
+        - name: GOOGLE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: pm01
+              key: GOOGLE_API_KEY
+        - name: HERE_APP_ID
+          valueFrom:
+            secretKeyRef:
+              name: pm01
+              key: HERE_APP_ID
+        - name: HERE_APP_CODE
+          valueFrom:
+            secretKeyRef:
+              name: pm01
+              key: HERE_APP_CODE

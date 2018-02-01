@@ -1,0 +1,9 @@
+.git
+.DS_Store
+*.pyc
+__pycache__
+Dockerfile
+README.md
+/test/*
+Makefile
+*.yaml

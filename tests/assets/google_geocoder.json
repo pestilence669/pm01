@@ -1,0 +1,74 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "8",
+               "short_name" : "8",
+               "types" : [ "subpremise" ]
+            },
+            {
+               "long_name" : "425",
+               "short_name" : "425",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Market Street",
+               "short_name" : "Market St",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Financial District",
+               "short_name" : "Financial District",
+               "types" : [ "neighborhood", "political" ]
+            },
+            {
+               "long_name" : "San Francisco",
+               "short_name" : "SF",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "San Francisco County",
+               "short_name" : "San Francisco County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "California",
+               "short_name" : "CA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "94105",
+               "short_name" : "94105",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "425 Market St #8, San Francisco, CA 94105, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 37.7913035,
+               "lng" : -122.3988535
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 37.79265248029149,
+                  "lng" : -122.3975045197085
+               },
+               "southwest" : {
+                  "lat" : 37.7899545197085,
+                  "lng" : -122.4002024802915
+               }
+            }
+         },
+         "place_id" : "Ei40MjUgTWFya2V0IFN0ICM4LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEwNSwgVVNB",
+         "types" : [ "subpremise" ]
+      }
+   ],
+   "status" : "OK"
+}
